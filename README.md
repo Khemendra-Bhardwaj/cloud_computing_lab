@@ -1,3 +1,12 @@
+To see the working of web app :
+run followinig command:
+(but make sure you have docker installed on your system)
+
+docker run -it -p 3000:3000 khemendra10/ssodocker
+(above command will pull the image made by me and start execute in container )
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
