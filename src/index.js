@@ -3,6 +3,11 @@ import  ReactDOM  from 'react-dom/client';
 import { Auth0Provider } from '@auth0/auth0-react';
 import App from './App';
 // import App from './App';
+import { BrowserRouter , Route, Routes } from 'react-router-dom';
+// import {HelloWorld} from './HelloWorldComponent';
+import Calculator from './Calculator';
+import TodoList from './TodoList';
+import MyCalendar from './BigCalender';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -13,7 +18,21 @@ root.render(
     authorizationParams={{
       redirect_uri: window.location.origin
     }}
-  >
-    <App />
+  > 
+
+
+  <BrowserRouter> 
+    <Routes>
+      
+      <Route path='/' element={<App/> }>  </Route>
+       
+      <Route path='/calender' element={ <MyCalendar/> }> </Route>
+      <Route path='/todolist' element={ <TodoList/> }>  </Route>
+
+      {/* </Route> */}
+    </Routes>
+  </BrowserRouter>
+    
+
   </Auth0Provider>,
 );
